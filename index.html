@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="CyberCoinvvs BNB token giveaway. Enter for a chance to win 100,000 giveaway tokens.">
+  <title>CyberCoinvvs — BNB Giveaway</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root{color-scheme:dark;--bg:#090d18;--panel:#111a2b;--panel2:#17243a;--line:#263650;--gold:#f0b90b;--text:#f5f7fb;--muted:#a8b4c8;--green:#4bd49a;--red:#ff7777}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#1a2c49 0,transparent 55%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:22px 14px 40px}
+    .wrap{width:min(100%,560px);margin:0 auto}.brand{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0 20px;font-weight:800;letter-spacing:.04em}.coin{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#171717;font-weight:900;font-size:21px;box-shadow:0 0 28px #f0b90b45}
+    .card{background:linear-gradient(160deg,#152239,#101827 65%);border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:0 20px 70px #0007}.eyebrow{text-align:center;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.title{text-align:center;font-size:clamp(27px,7vw,39px);line-height:1.12;margin:9px 0 8px}.subtitle{text-align:center;color:var(--muted);margin:0 auto 22px;max-width:420px}
+    .prize{border:1px solid #806416;background:linear-gradient(135deg,#3a2d0c,#211d17);border-radius:18px;text-align:center;padding:18px 12px;margin:20px 0}.prize small{display:block;color:#f6d66d;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.amount{font-size:clamp(34px,9vw,48px);font-weight:900;letter-spacing:-.04em;margin:2px 0;color:#ffe08a}.amount span{font-size:18px;letter-spacing:0;color:#f6d66d}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 22px}.fact{background:#0d1524;border:1px solid var(--line);border-radius:13px;padding:12px}.fact b{display:block;font-size:14px}.fact small{color:var(--muted);font-size:12px}
+    form{display:grid;gap:14px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#dce5f3}.field input{width:100%;padding:13px 14px;border-radius:11px;border:1px solid #354663;background:#0b1321;color:var(--text);font:inherit;outline:none}.field input:focus{border-color:var(--gold);box-shadow:0 0 0 3px #f0b90b20}.field input[readonly]{color:#c5d0e1;background:#111c2e}.hint{display:block;color:var(--muted);font-size:11px;margin-top:5px}.check{display:flex;align-items:flex-start;gap:10px;color:#c3cede;font-size:12px}.check input{margin-top:4px;accent-color:var(--gold)}button{width:100%;border:0;border-radius:12px;padding:15px 18px;background:linear-gradient(135deg,#ffd84d,#e6a900);color:#171717;font-size:16px;font-weight:900;cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}.status{min-height:22px;text-align:center;font-size:13px;color:var(--muted);margin-top:3px}.status.error{color:var(--red)}.status.success{color:var(--green)}
+    .details{margin-top:18px;padding:15px;background:#0b1321;border:1px solid var(--line);border-radius:13px}.details h2{font-size:14px;margin:0 0 8px}.details p{font-size:12px;color:var(--muted);margin:6px 0;overflow-wrap:anywhere}.details a,footer a{color:#f6d66d;text-decoration:none}.details a:hover,footer a:hover{text-decoration:underline}footer{text-align:center;color:#8290a7;font-size:11px;margin:18px 6px 0}footer p{margin:7px 0}.notice{font-size:11px;color:#9eacc1;text-align:center;margin:14px 0 0}
+    @media(max-width:390px){.card{padding:19px}.facts{gap:8px}.fact{padding:10px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand"><span class="coin">B</span><span>CYBERCOINVVS</span></div>
+    <section class="card" aria-labelledby="page-title">
+      <div class="eyebrow">Community token giveaway</div>
+      <h1 class="title" id="page-title">Your chance to win</h1>
+      <p class="subtitle">Join the CyberCoinvvs giveaway. Submit your details below for one entry.</p>
+      <div class="prize"><small>Total prize</small><div class="amount">100,000 <span>BNB</span></div><small>One randomly selected winner</small></div>
+      <div class="facts">
+        <div class="fact"><small>Giveaway opens</small><b>18 Nov 2026</b></div>
+        <div class="fact"><small>Entries close</small><b>31 Mar 2027 · UTC</b></div>
+        <div class="fact"><small>Blockchain</small><b>BNB Smart Chain</b></div>
+        <div class="fact"><small>Entry limit</small><b>One per person</b></div>
+      </div>
+      <form id="entry-form" novalidate>
+        <div class="field"><label for="telegram">Telegram username</label><input id="telegram" name="telegram_username" type="text" placeholder="@yourusername" maxlength="64" autocomplete="username" required><span class="hint">Your Telegram username helps identify your entry.</span></div>
+        <div class="field"><label for="wallet">Public BNB Smart Chain wallet address</label><input id="wallet" name="wallet_address" type="text" placeholder="0x…" minlength="42" maxlength="42" autocapitalize="off" spellcheck="false" required><span class="hint">Enter a public wallet address you control. Never enter a seed phrase or private key.</span></div>
+        <div class="field"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" placeholder="you@example.com" maxlength="254" autocomplete="email"></div>
+        <label class="check"><input id="agree" type="checkbox" required><span>I confirm that I meet the eligibility requirements, have read the <a href="/rules" target="_blank" rel="noopener">Official Rules</a> and <a href="/privacy" target="_blank" rel="noopener">Privacy Notice</a>, and consent to the processing of my entry details for this giveaway.</span></label>
+        <button id="submit-button" type="submit">Submit my entry</button>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+      <div class="details">
+        <h2>Token and network information</h2>
+        <p><strong>Network:</strong> BNB Smart Chain</p>
+        <p><strong>Token contract:</strong> <span id="contract">0x854A21266A02cd2f4c31D3FB6f8A2271CF9DE8d8</span></p>
+        <p><strong>Organizer:</strong> CyberCoinvvs</p>
+        <p><strong>Privacy contact:</strong> <a href="mailto:erc20giveaway@gmail.com">erc20giveaway@gmail.com</a></p>
+      </div>
+      <p class="notice">No payment, purchase, wallet connection, signature, or transaction is required to enter. This page will never ask for your recovery phrase or private key.</p>
+    </section>
+    <footer><p>© 2026 CyberCoinvvs. All rights reserved.</p><p><a href="/rules">Official Rules</a> · <a href="/privacy">Privacy Notice</a> · <a href="mailto:erc20giveaway@gmail.com">Contact</a></p><p>Participation is available worldwide only where legally permitted. Void where prohibited.</p></footer>
+  </main>
+<script>
+(() => {
+  const tg = window.Telegram?.WebApp;
+  if (tg) {
+    tg.ready();
+    tg.expand();
+    const user = tg.initDataUnsafe?.user;
+    const usernameField = document.getElementById('telegram');
+    if (user?.username) usernameField.value = '@' + user.username;
+  }
+
+  const form = document.getElementById('entry-form');
+  const button = document.getElementById('submit-button');
+  const status = document.getElementById('status');
+  const setStatus = (message, type = '') => { status.textContent = message; status.className = 'status ' + type; };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const telegram = document.getElementById('telegram').value.trim().replace(/^@/, '');
+    const wallet = document.getElementById('wallet').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const agreed = document.getElementById('agree').checked;
+
+    if (!/^[A-Za-z0-9_]{5,32}$/.test(telegram)) return setStatus('Enter a valid Telegram username (5–32 letters, numbers or underscores).', 'error');
+    if (!/^0x[a-fA-F0-9]{40}$/.test(wallet)) return setStatus('Enter a valid 42-character BNB Smart Chain wallet address.', 'error');
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setStatus('Enter a valid email address or leave it blank.', 'error');
+    if (!agreed) return setStatus('Please accept the Official Rules and Privacy Notice before submitting.', 'error');
+
+    // Telegram Mini Apps must send the raw initData to the backend for server-side signature validation.
+    // Never trust initDataUnsafe on the server and never put BOT_TOKEN in this file.
+    const payload = { telegram_username: telegram, wallet_address: wallet, email: email || null, consent: true, telegram_init_data: tg?.initData || '' };
+    button.disabled = true;
+    button.textContent = 'Submitting…';
+    setStatus('');
+    try {
+      const response = await fetch('/api/entries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'Your entry could not be submitted. Please try again.');
+      form.reset();
+      setStatus(result.message || 'Your entry has been received. Thank you for participating!', 'success');
+    } catch (error) {
+      setStatus(error.message || 'Unable to reach the entry server. Please try again later.', 'error');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Submit my entry';
+    }
+  });
+})();
+</script>
+</body>
+</html>
